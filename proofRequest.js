@@ -7,6 +7,7 @@ const humanReadableAuthReason = "Aggregated Marks should be greater than 80%";
 
 const credentialSubject = {
   Marks: {
+    $gt: 80,
   },
 };
 

@@ -1,7 +1,7 @@
 module.exports = {
   // VC type: KYCAgeCredential
   // https://raw.githubusercontent.com/iden3/claim-schema-vocab/main/schemas/json-ld/kyc-v3.json-ld
-  KYCAgeCredential: (credentialSubject) => ({
+  ScholaCredential: (credentialSubject) => ({
     id: 1,
     circuitId: "credentialAtomicQuerySigV2",
     query: {

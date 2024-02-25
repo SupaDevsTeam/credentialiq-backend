@@ -65,19 +65,19 @@ ex 1: User must have Taylor Swift's [exact](https://0xpolygonid.github.io/tutori
 
 ```js
 {
-  birthday: {
-    $eq: 19891213,
+  marks: {
+    $eq: 50,
   },
 };
 
 ```
 
-ex 2: User's KYCAgeCredential documentType must be [greater than](https://0xpolygonid.github.io/tutorials/verifier/verification-library/zk-query-language/#greater-than-operator-3) 420
+ex 2: User's ScholaCredential documentType must be [greater than](https://0xpolygonid.github.io/tutorials/verifier/verification-library/zk-query-language/#greater-than-operator-3) 420
 
 ```js
 {
-  documentType: {
-    $gt: 420,
+  marks: {
+    $gt: 80,
   },
 };
 
@@ -85,7 +85,7 @@ ex 2: User's KYCAgeCredential documentType must be [greater than](https://0xpoly
 
 **default: [proofRequest](https://github.com/oceans404/vc-verifier/blob/main/proofRequest.js#L8)**
 
-If you don't customize `proofRequest.js`, this server will send a verification request for an KYCAgeCredential proof with a birthday before January 1, 2023 to the [credentialAtomicQuerySigV2 circuit](https://docs.iden3.io/protocol/main-circuits/#credentialatomicquerysigv2). This circuit is specified by the circuitId in `vcHelpers/KYCAgeCredential.js`, set to credentialAtomicQuerySigV2.
+If you don't customize `proofRequest.js`, this server will send a verification request for an ScholaCredential proof with a birthday before January 1, 2023 to the [credentialAtomicQuerySigV2 circuit](https://docs.iden3.io/protocol/main-circuits/#credentialatomicquerysigv2). This circuit is specified by the circuitId in `vcHelpers/ScholaCredential.js`, set to credentialAtomicQuerySigV2.
 
 ```js
 {
@@ -102,7 +102,7 @@ If you don't customize `proofRequest.js`, this server will send a verification r
 
 The credentialAtomicQuerySigV2 circuit
 
-- Verifies that the prover (your user) is owner of a VC with the KYCAgeCredential type
+- Verifies that the prover (your user) is owner of a VC with the ScholaCredential type
 - Verifies that the identity is the subject of the claim
 - Verifies that the claim was signed by the issuer
 - Verifies that the claim schema matches the one in the query
